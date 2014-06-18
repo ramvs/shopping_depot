@@ -9,4 +9,9 @@ validates :image_url, allow_blank: true, format: {
 
 }
 
+def self.latest
+	Product.order(:updated_at).last
+end
+
+
 end
